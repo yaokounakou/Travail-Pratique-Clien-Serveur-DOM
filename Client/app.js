@@ -1,7 +1,6 @@
-const path = require("path")
-const open = require("open");
+const path = require("path");
 const express = require("express");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 2000;
 
 const app = express();
 
@@ -18,6 +17,5 @@ app.get("/creerUnCompte", (req, rep) => {
 
 /*---------- ÉCOUTE DU SERVEUR ----------*/
 app.listen(PORT, () => {
-    open("http://localhost:3000/ouvrirUneSession");
     console.log("L'application du côté client s'exécute sur le port " + PORT)
 })
