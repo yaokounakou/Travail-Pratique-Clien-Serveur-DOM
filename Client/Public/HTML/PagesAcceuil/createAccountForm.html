@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session - Créer un compte</title>
+
+    <link rel="icon" href="../../Medias/User Icon.png" type="image.png">
+    <link rel="stylesheet" href="../../CSS/PagesAccueil/createAccountForm.css">
+
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="userImageSection">
+            <img src="../Medias/User Icon.png" alt="Icône de l'utilisateur" id="userImageIcon">
+        </div>
+    
+        <form id="createAccountFormulaire" onsubmit="creerUnCompte(event)">
+            
+            <div id="formSection">
+
+                <h1 id="createAccountTitle">Créer un compte</h1>
+
+                <label for="Nom">Nom</label>
+                <input type="text" placeholder="Nom" name="Nom">
+                
+                <label for="Prénom">Prénom</label>
+                <input type="text" placeholder="Prénom" name="Prénom">
+
+                <label for="Courriel">Courriel</label>
+                <input type="text" placeholder="Adresse courriel" name="Nom">
+                
+                <label for="Username">Nom d'utilisateur</label>
+                <input type="text" placeholder="Nom d'utilisateur" name="Username">
+                
+                <label for="Password">Mot de passe</label>
+                <input type="text" placeholder="Mot de passe" name="Password">
+                
+                <label for="Âge">Âge</label>
+                <input type="number" min="1" placeholder="Âge" name="Âge">
+                
+                <label for="Occupation">Occupation</label>
+                <input type="text" placeholder="Occupation" name="Occupation">
+                
+                <label for="Description">Description</label>
+                <textarea name="" id="Description" placeholder="Description"></textarea>
+
+            </div>
+            
+            <div id="createAccount">                
+                <input type="submit" value="Créer un compte &#x203A;">
+            </div>
+
+            <div id="openASession">
+                <a href="http://localhost:3000/ouvrirUneSession">Se connecter<br> </a>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "Client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "mssql": "^7.2.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "sqlite3": "^4.0.23"
+  },
+  
+  "nodemonConfig": {
+    "ext": "js,html,json,css"
+  }
+}

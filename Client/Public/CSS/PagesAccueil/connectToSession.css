@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*---------- SCROLLBAR ----------*/
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 20px;
+    border: 3px solid #fff;
+}
+
+/*------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    background-color: #1b1d29;
+}
+
+#container {
+    width: 500px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 10px 10px #000;
+    transition: .5s ease;
+}
+
+#userImageIcon {
+    height: 100px;
+    transition: .5s;
+}
+
+#userImageIcon:hover {
+    height: 125px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#userImageSection {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+#formSection {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#connectionTitle {
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 50px;
+}
+
+input[type=text], [type=password] {
+    width: 100%; 
+    margin: 8px 0;
+    padding: 15px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+#submitButton {
+    text-align: center;
+}
+
+input[type=submit] {
+    color: #000;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 200px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: .25s ease-in-out;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 10px #000;
+    background-color: #0072d2;
+    transition: .25s ease-in-out;
+}
+
+/*----- Lien Créer un compte utilisateur -----*/
+
+#createAccount {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 15px 20px 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+#createAccount a {
+    color: #000;
+    text-decoration: none;
+    transition: .15s ease-in-out;
+}
+
+#createAccount a:hover {
+    color: #0072d2;
+    transition: .15s ease-in-out;
+}
