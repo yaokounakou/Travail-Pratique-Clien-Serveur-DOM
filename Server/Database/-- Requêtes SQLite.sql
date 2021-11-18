@@ -5,6 +5,7 @@ CREATE TABLE Utilisateurs (
 Nom VARCHAR(30),
 Prénom VARCHAR(30),
 Username VARCHAR(15),
+Password VARCHAR(30),
 Âge INT,
 Occupation VARCHAR(50),
 Description TEXT,

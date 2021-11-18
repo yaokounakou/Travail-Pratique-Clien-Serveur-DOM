@@ -15,6 +15,10 @@ app.get("/creerUnCompte", (req, rep) => {
     rep.sendFile(path.join(__dirname + "/Public/HTML/PagesAcceuil/createAccountForm.html"))
 })
 
+app.get("/profilUtilisateur", (req, rep) => {
+    rep.sendFile(path.join(__dirname + "/Public/HTML/PageProfil/profilePage.html"))
+})
+
 /*---------- ÉCOUTE DU SERVEUR ----------*/
 app.listen(PORT, () => {
     console.log("L'application du côté client s'exécute sur le port " + PORT)
