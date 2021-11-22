@@ -9,7 +9,7 @@
 /*---------- SCROLLBAR ----------*/
 
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 12.5px;
 }
 
 *::-webkit-scrollbar-track {
@@ -26,19 +26,98 @@
 
 body {
     color: #fff;
+    font-size: 25px;
     font-family: 'Roboto', sans-serif;
-    background-color: #1b1d29;
+    background-color: #141415;
 }
 
-#container {
-    width: 1000px;
-    height: 750px ;
-    padding: 50px;
+#title {
+    width: max-content;
+    padding: 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #3EB650;
+
+    font-size: 15px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+#profileBlock {
+    width: 900px;
+    padding: 75px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
     margin-bottom: 75px;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.35);
     transition: .5s ease;
+}
+
+#userImageSection {
+    width: 300px;
+    padding: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 10px 5px #000;
+}
+
+#userImageSection img {
+    width: 300px;
+}
+
+#firstInfo {
+    margin-bottom: 25px;
+}
+
+#firstInfo1 {
+    margin-bottom: 15px;
+}
+
+#line {
+    width: 70%;
+}
+
+#secondInfo {
+    margin-top: 25px;
+}
+
+#secondInfo2 {
+    margin-top: 15px;
+}
+
+#secondInfo2 p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 150%;
+}
+
+#seDeconnecter {
+    color: #000;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: max-content;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: .25s ease-in-out;
+
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+#seDeconnecter:hover {
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 10px #000;
+    background-color: #E12B38;
+    transition: .25s ease-in-out;
 }

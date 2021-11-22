@@ -21,5 +21,5 @@ app.get("/profilUtilisateur", (req, rep) => {
 
 /*---------- ÉCOUTE DU SERVEUR ----------*/
 app.listen(PORT, () => {
-    console.log("L'application du côté client s'exécute sur le port " + PORT + ".")
+    console.log("L'application du côté client s'exécute sur le port " + PORT + ".");
 })

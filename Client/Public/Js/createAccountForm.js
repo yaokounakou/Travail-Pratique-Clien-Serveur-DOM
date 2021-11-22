@@ -12,10 +12,10 @@ function creerUnCompte(event) {
 
         if(reponseJson.success) {
             alert("Votre compte a bien été créé. Cliquez pour vous connecter.");
-            window.location.href = "http://localhost:2000/ouvrirUneSession"
+            window.location.href = "http://localhost:2000/ouvrirUneSession";
         }
         else {
-            alert("Une erreur s'est produite. Réessayez à nouveau. " + reponseJson.erreur)
+            alert("Une erreur s'est produite. Réessayez à nouveau. " + reponseJson.erreur);
         }
 
     })

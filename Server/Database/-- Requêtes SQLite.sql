@@ -18,9 +18,9 @@ INSERT INTO Utilisateurs VALUES
 
 ('Kiser', 'Katherine B.', 'kathKiser', 'kathKiser', 28, 'Journaliste', "Un journaliste est une personne qui recueille ou recherche, vérifie et écrit puis distribue des informations sur tout type de support média (presse écrite, radio, TV et les technologies de l'information et de la communication du Web).",'katherinekiser@dayrep.com'),
 
-('Sheppard', 'Matthew C.', 'matthewSheppard', 'kathKiser', 73, 'Astronome', "L’astronome étudie le système céleste, l'origine et l'évolution de l'Univers. Il ou elle peut faire le choix de se spécialiser dans l'astrométrie (position et mouvement des astres),la mécanique céleste (lois régissant le mouvement des astres) ou l'astrophysique (physique appliquée à l'astronomie).",'matthewSheppard@nasa.com');
+('Sheppard', 'Matthew C.', 'matthewSheppard', 'matthewSheppard', 73, 'Astronome', "L’astronome étudie le système céleste, l'origine et l'évolution de l'Univers. Il ou elle peut faire le choix de se spécialiser dans l'astrométrie (position et mouvement des astres),la mécanique céleste (lois régissant le mouvement des astres) ou l'astrophysique (physique appliquée à l'astronomie).",'matthewSheppard@nasa.com');
 
 /*----------Affichage----------*/
 SELECT * FROM Utilisateurs
 
-DROP TABLE Utilisateurs
+-- DROP TABLE Utilisateurs

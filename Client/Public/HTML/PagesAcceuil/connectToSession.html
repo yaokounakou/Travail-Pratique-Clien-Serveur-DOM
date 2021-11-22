@@ -9,6 +9,7 @@
 
     <link rel="icon" href="../../Medias/User Icon.png" type="image.png">
     <link rel="stylesheet" href="../../CSS/PagesAccueil/connectToSession.css">
+    <script src="../../Js/connectToSession.js"></script>
 </head>
 <body>
     
@@ -18,16 +19,20 @@
             <img src="../../Medias/User Icon.png" alt="Icône de l'utilisateur" id="userImageIcon">
         </div>
     
-        <form action="" >
+        <form id="connectToAccountFormulaire" onsubmit="seConnecter()">
             
             <div id="formSection">
                 <h1 id="connectionTitle">Session</h1>
 
-                <label for="usernameEmail">Identifiant</label>
-                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameEmail">
+                <label for="usernameOrEmail">Identifiant</label>
+                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameOrEmail" id="usernameOrEmail" autocomplete="username, email">
                 
                 <label for="password">Mot de passe</label>
-                <input type="password" placeholder="••••••••••" name="password" min="6" required>
+                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" required autocomplete="current-password">
+            </div>
+
+            <div id="error">
+
             </div>
             
             <div id="submitButton">                
