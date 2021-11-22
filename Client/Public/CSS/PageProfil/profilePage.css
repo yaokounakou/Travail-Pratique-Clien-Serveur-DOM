@@ -25,10 +25,9 @@
 /*------------------------------*/
 
 body {
-    color: #fff;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
-    background-color: #141415;
+    background-color: #fff;
 }
 
 #title {
@@ -47,29 +46,38 @@ body {
 }
 
 #profileBlock {
-    width: 900px;
+    width: 700px;
     padding: 75px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
     margin-bottom: 75px;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.35);
+    border: 2px solid #000;
+    background-color: #f5f5f5;
     transition: .5s ease;
 }
 
 #userImageSection {
-    width: 300px;
+    display: flex;
+    width: max-content;
     padding: 50px;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
-    border-radius: 25px;
-    background-color: #f5f5f5;
-    box-shadow: 0px 10px 5px #000;
+    border-radius: 50px;
+    background-color: #fff;
+    /* box-shadow: 0px 10px 5px #000; */
 }
 
-#userImageSection img {
-    width: 300px;
+#userImageSection h1 {
+    margin-left: 15px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
 }
 
 #firstInfo {
@@ -117,6 +125,7 @@ body {
 #seDeconnecter:hover {
     color: #fff;
     cursor: pointer;
+    border: 2px solid #000;
     box-shadow: 0px 10px #000;
     background-color: #E12B38;
     transition: .25s ease-in-out;
