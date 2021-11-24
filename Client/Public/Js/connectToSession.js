@@ -14,7 +14,8 @@ function seConnecter(event) {
     .then(reponseJson => {
 
         if(reponseJson.success) {
-            window.location.href = "http://localhost:2000/profilUtilisateur";
+            window.location.href = "http://localhost:2000/profilUtilisateur" + JSON.stringify(reponseJson.username);
+            console.log(reponseJson.username)
         }
         else {
             alert(reponseJson.erreur);

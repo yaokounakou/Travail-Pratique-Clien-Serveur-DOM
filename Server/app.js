@@ -75,7 +75,7 @@ app.post("/connexionUtilisateur", async(req, rep) => {
             password: req.body.password
         }
 
-        console.log(userConnexion.Username);
+        console.log(userConnexion.username);
 
         const donnees = await requetesKnex.voirUtilisateurs();
 
@@ -86,7 +86,8 @@ app.post("/connexionUtilisateur", async(req, rep) => {
                     success: true
                 });
                 connexion = true;
-                return
+                return userName = userConnexion.username;
+                // return
             }
         }
         if (!connexion) {
