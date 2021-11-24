@@ -19,16 +19,18 @@
             <img src="../../Medias/User Icon.png" alt="Icône de l'utilisateur" id="userImageIcon">
         </div>
     
-        <form id="connectToAccountFormulaire" onsubmit="seConnecter()">
+        <form id="connectToAccountFormulaire" name="form" onsubmit="return seConnecter()" autocomplete="off">
             
             <div id="formSection">
                 <h1 id="connectionTitle">Session</h1>
 
                 <label for="usernameOrEmail">Identifiant</label>
-                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameOrEmail" id="usernameOrEmail" autocomplete="username, email">
+                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameOrEmail" id="usernameOrEmail" >
+                <div id="usernameOrEmailError">Le nom d'utilisateur ou courriel est incorrect.</div>
                 
                 <label for="password">Mot de passe</label>
-                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" required autocomplete="current-password">
+                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" >
+                <div id="passwordError">Le mot de passe est incorrect.</div>
             </div>
 
             <div id="error">

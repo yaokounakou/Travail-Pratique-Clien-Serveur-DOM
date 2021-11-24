@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended: false}));
 
+app.set("json spaces", 2);
 
 /*---------------  ---------------*/
 app.get("/utilisateurs", async(req, rep) => {

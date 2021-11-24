@@ -72,6 +72,19 @@ body {
     margin-top: 50px;
 }
 
+#usernameOrEmailError, #passwordError {
+    width: 92.5%;
+    padding: 15px;
+    color: #E12B38;
+    text-align: center;
+    font-size: 17.5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #E12B38;
+    background-color: rgba(225, 43, 55, 0.25);
+    display: none;
+}
+
 #connectionTitle {
     text-align: center;
     line-height: 0;
