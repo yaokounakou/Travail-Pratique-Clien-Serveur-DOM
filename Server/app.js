@@ -64,6 +64,44 @@ app.post("/utilisateur", async(req, rep) => {
     }
 })
 
+app.post("/connexionUtilisateur", async(req, rep) => {
+    
+    try {
+        
+        let connection = false;
+
+        let connexionUtilisateur = {
+            Username: req.body.Username,
+            Password: req.body.Password
+        }
+
+        console.log(connexionUtilisateur.Username);
+
+        let donnees = await requetesKnex.voirUtilisateurs();
+
+        for (i = 0; i < donnees.length; i++) {
+            if ((connexionUtilisateur.Username == donnees[i].Username || connexionUtilisateur.Username == donnees[i].Courriel) && (connexionUtilisateur.Password == donnees[i].Password)) {
+                rep.status(200).json({
+                    success: true
+                });
+            }
+        }
+        if (!connection) {
+            rep.status(200).json({
+                success: false
+            });
+        }
+
+    } catch (error) {
+
+        rep.status(500).json({
+            success: false,
+            erreur: error
+        });
+
+    }
+})
+
 /*---------------  ---------------*/
 
 app.listen(PORT, () => {
