@@ -68,27 +68,31 @@ app.post("/connexionUtilisateur", async(req, rep) => {
     
     try {
         
-        let connection = false;
+        let connexion = false;
 
-        let connexionUtilisateur = {
-            Username: req.body.Username,
-            Password: req.body.Password
+        const userConnexion = {
+            username: req.body.usernameOrEmail,
+            password: req.body.password
         }
 
-        console.log(connexionUtilisateur.Username);
+        console.log(userConnexion.Username);
 
-        let donnees = await requetesKnex.voirUtilisateurs();
+        const donnees = await requetesKnex.voirUtilisateurs();
 
         for (i = 0; i < donnees.length; i++) {
-            if ((connexionUtilisateur.Username == donnees[i].Username || connexionUtilisateur.Username == donnees[i].Courriel) && (connexionUtilisateur.Password == donnees[i].Password)) {
+            if ((userConnexion.username == donnees[i].Username || userConnexion.username == donnees[i].Courriel) && (userConnexion.password == donnees[i].Password)) {
+                console.log("Hello")
                 rep.status(200).json({
                     success: true
                 });
+                connexion = true;
+                return
             }
         }
-        if (!connection) {
+        if (!connexion) {
             rep.status(200).json({
-                success: false
+                success: false,
+                erreur: "Nom d'utilisateur, courriel ou mot de passe invalide."
             });
         }
 

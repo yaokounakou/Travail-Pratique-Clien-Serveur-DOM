@@ -4,7 +4,10 @@ function seConnecter(event) {
 
     let dataForm = new URLSearchParams(new FormData(event.target));
 
-    fetch("http://localhost:3000/connexionUtilisateur", {method: "POST", body: dataForm})
+    fetch("http://localhost:3000/connexionUtilisateur", {
+        method: "POST",
+        body: dataForm
+    })
     .then( reponse => {
         return reponse.json()
     })
@@ -16,6 +19,6 @@ function seConnecter(event) {
         else {
             alert(reponseJson.erreur);
         }
-
     })
+
 }

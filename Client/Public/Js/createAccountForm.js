@@ -4,7 +4,10 @@ function creerUnCompte(event) {
 
     let dataForm = new URLSearchParams(new FormData(event.target));
 
-    fetch("http://localhost:3000/utilisateur", {method: "POST", body: dataForm})
+    fetch("http://localhost:3000/utilisateur", {
+        method: "POST",
+        body: dataForm,
+    })
     .then( reponse => {
         return reponse.json()
     })
