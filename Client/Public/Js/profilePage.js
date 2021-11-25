@@ -1,6 +1,6 @@
 window.onload = load;
 
-const utilisateur = localStorage.getItem('utilisateur')
+let dataForm = new URLSearchParams(new FormData(target));
 
 function load() {
     fetch("http://localhost:2000/profilUtilisateur/" + utilisateur)
@@ -14,8 +14,6 @@ function load() {
         let occupation = document.getElementById("occupation");
         let description = document.getElementById("description");
 
-        let section1 = document.createElement("h1");
-        nomPrenomAge.appendChild(section1)
 
     })
 }

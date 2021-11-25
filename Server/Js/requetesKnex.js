@@ -18,7 +18,9 @@ function ajouterUnUtilisateur(utilisateur) {
 }
 
 function afficherUnUtilisateur(utilisateur) {
-    return knex("Utilisateurs").where("Nom", utilisateur);
+    return knex("Utilisateurs")
+    .where("Nom", utilisateur)
+    .orWhere("Courriel", utilisateur);
 }
 
 

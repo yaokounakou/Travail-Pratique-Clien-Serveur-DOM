@@ -112,8 +112,9 @@ app.post("/connexionUtilisateur", async(req, rep) => {
 app.get("/afficherUtilisateur/:id", async(req, rep) => {
    
     try {
-        let utilisateurs = await requetesKnex.voirUtilisateurs();
-        rep.status(200).json(utilisateurs);
+        let utilisateur = requetesKnex.params.id;
+        let utilisateurInfo = await requetesKnex.afficherUnUtilisateur(utilisateur);
+        rep.status(200).json(utilisateurInfo);
         
     } catch (error) {
         rep.status(500).json();
