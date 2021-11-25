@@ -4,6 +4,9 @@ function seConnecter(event) {
 
     let dataForm = new URLSearchParams(new FormData(event.target));
 
+    const error = document.getElementById("usernameEmailOrPasswordError");
+
+
     fetch("http://localhost:3000/connexionUtilisateur", {
         method: "POST",
         body: dataForm
@@ -14,11 +17,11 @@ function seConnecter(event) {
     .then(reponseJson => {
 
         if(reponseJson.success) {
-            window.location.href = "http://localhost:2000/profilUtilisateur" + JSON.stringify(reponseJson.username);
+            window.location.href = "http://localhost:2000/profilUtilisateur/" + reponseJson.username;
             console.log(reponseJson.username)
         }
         else {
-            alert(reponseJson.erreur);
+            error.style.display = "block";
         }
     })
 

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../Medias/User Icon.png" type="image.png">
     <link rel="stylesheet" href="../../CSS/PagesAccueil/connectToSession.css">
-    <script src="../../Js/connectToSession.js"></script>
+    <script defer src="../../Js/connectToSession.js"></script>
 </head>
 <body>
     
@@ -25,12 +25,11 @@
                 <h1 id="connectionTitle">Session</h1>
 
                 <label for="usernameOrEmail">Identifiant</label>
-                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameOrEmail" id="usernameOrEmail">
-                <div id="usernameOrEmailError">Le nom d'utilisateur ou courriel est incorrect.</div>
+                <input type="text" placeholder="Nom d'utilisateur / Courriel" name="usernameOrEmail" id="usernameOrEmail" autocomplete="email, username">
                 
                 <label for="password">Mot de passe</label>
-                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" >
-                <div id="passwordError">Le mot de passe est incorrect.</div>
+                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" autocomplete="current-password">
+                <div id="usernameEmailOrPasswordError">Nom d'utilisateur, courriel ou mot de passe invalide.</div>
             </div>
 
             <div id="error">

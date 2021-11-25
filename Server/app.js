@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}));
 
 app.set("json spaces", 2);
 
-/*---------------  ---------------*/
+/*---------------------------------------------*/
 app.get("/utilisateurs", async(req, rep) => {
    
     try {
@@ -81,12 +81,14 @@ app.post("/connexionUtilisateur", async(req, rep) => {
 
         for (i = 0; i < donnees.length; i++) {
             if ((userConnexion.username == donnees[i].Username || userConnexion.username == donnees[i].Courriel) && (userConnexion.password == donnees[i].Password)) {
-                console.log("Hello")
-                rep.status(200).json({
-                    success: true
+
+                rep.status(200).json ({
+                    success: true,
+                    username: donnees[i].Username
                 });
+
                 connexion = true;
-                return userName = userConnexion.username;
+
                 // return
             }
         }
@@ -107,7 +109,19 @@ app.post("/connexionUtilisateur", async(req, rep) => {
     }
 })
 
-/*---------------  ---------------*/
+app.get("/afficherUtilisateur/:id", async(req, rep) => {
+   
+    try {
+        let utilisateurs = await requetesKnex.voirUtilisateurs();
+        rep.status(200).json(utilisateurs);
+        
+    } catch (error) {
+        rep.status(500).json();
+    }
+
+})
+
+/*---------------------------------------------*/
 
 app.listen(PORT, () => {
     console.log("L'application du côté serveur s'exécute sur le port " + PORT + ".")

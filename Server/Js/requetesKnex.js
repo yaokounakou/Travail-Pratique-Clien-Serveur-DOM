@@ -13,10 +13,17 @@ function voirUtilisateurs() {
 }
 
 function ajouterUnUtilisateur(utilisateur) {
+    console.log(utilisateur);
     return knex("Utilisateurs").insert(utilisateur);
 }
 
+function afficherUnUtilisateur(utilisateur) {
+    return knex("Utilisateurs").where("Nom", utilisateur);
+}
+
+
 module.exports = {
     ajouterUnUtilisateur,
-    voirUtilisateurs
+    voirUtilisateurs,
+    afficherUnUtilisateur
 }

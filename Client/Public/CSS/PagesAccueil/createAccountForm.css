@@ -109,7 +109,8 @@ input[type=submit]:hover {
     color: #fff;
     cursor: pointer;
     box-shadow: 0px 10px #000;
-    background-color: #0072d2;
+    background-color: #3EB650;
+    /* background-color: #0072d2; */
     transition: .25s ease-in-out;
 }
 
@@ -131,7 +132,8 @@ input[type=submit]:hover {
 }
 
 #openASession a:hover {
-    color: #0072d2;
+    color: #3EB650;
+    /* color: #0072d2; */
     transition: .15s ease-in-out;
 }
 
