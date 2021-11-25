@@ -9,12 +9,13 @@ function load() {
     })
     .then(reponseJson => {
 
-        let nomPrenomAge = document.getElementById("firstInfo1");
-        let pseudoCourriel = document.getElementById("firstInfo2");
+        let nomPrenomAge = document.getElementById("nom-prenom-age");
+        let pseudoCourriel = document.getElementById("pseudo-courriel");
         let occupation = document.getElementById("occupation");
-        let description = document.getElementById("secondInfo2");
+        let description = document.getElementById("description");
 
-        let 
+        let section1 = document.createElement("h1");
+        nomPrenomAge.appendChild(section1)
 
     })
 }
