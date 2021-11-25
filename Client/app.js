@@ -15,7 +15,7 @@ app.get("/creerUnCompte", (req, rep) => {
     rep.sendFile(path.join(__dirname + "/Public/HTML/PagesAcceuil/createAccountForm.html"))
 })
 
-app.get("/profilUtilisateur/:id", (req, rep) => {
+app.get("/profilUtilisateur/", (req, rep) => {
     rep.sendFile(path.join(__dirname + "/Public/HTML/PageProfil/profilePage.html"))
 })
 
